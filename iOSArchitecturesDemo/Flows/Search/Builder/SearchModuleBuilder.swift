@@ -8,19 +8,22 @@
 
 import UIKit
 
- final class SearchModuleBuilder {
-
-     static func appBuild() -> (UIViewController & AppSearchViewInput) {
-         let presenter = AppSearchPresenter()
-         let viewController = AppSearchViewController(presenter: presenter)
-         presenter.viewInput = viewController
-         return viewController
-     }
-
-     static func songBuild() -> (UIViewController & SongSearchViewInput) {
-         let presenter = SongSearchPresenter()
-         let viewController = SongSearchViewController(presenter: presenter)
-         presenter.viewInput = viewController
-         return viewController
-     }
- }
+final class SearchModuleBuilder {
+    
+    static func appBuild() -> (UIViewController & AppSearchViewInput) {
+        let router = SearchRouter()
+        let interactor = SearchInteractor()
+        let presenter = AppSearchPresenter(interactor: interactor, router: router)
+        let viewController = AppSearchViewController(presenter: presenter)
+        presenter.viewInput = viewController
+        router.viewController = viewController
+        return viewController
+    }
+    
+    static func songBuild() -> (UIViewController & SongSearchViewInput) {
+        let presenter = SongSearchPresenter()
+        let viewController = SongSearchViewController(presenter: presenter)
+        presenter.viewInput = viewController
+        return viewController
+    }
+}
