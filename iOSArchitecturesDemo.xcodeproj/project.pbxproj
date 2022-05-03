@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5046E225282167A700367ECE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E224282167A700367ECE /* Observable.swift */; };
+		5046E227282167C700367ECE /* ObservableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E226282167C700367ECE /* ObservableOptions.swift */; };
+		5046E22A2821684C00367ECE /* SearchInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E2292821684C00367ECE /* SearchInteractorInput.swift */; };
+		5046E22D282168F300367ECE /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E22C282168F300367ECE /* SearchRouter.swift */; };
+		5046E2302821697700367ECE /* DownloadingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5046E22F2821697700367ECE /* DownloadingApp.swift */; };
 		50BC575B281698C000EE9000 /* AppDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC575A281698C000EE9000 /* AppDescriptionViewController.swift */; };
 		50BC575D281698F600EE9000 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC575C281698F600EE9000 /* AppDetailHeaderViewController.swift */; };
 		50BC575F281699EA00EE9000 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BC575E281699EA00EE9000 /* SongDetailViewController.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5046E224282167A700367ECE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		5046E226282167C700367ECE /* ObservableOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableOptions.swift; sourceTree = "<group>"; };
+		5046E2292821684C00367ECE /* SearchInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorInput.swift; sourceTree = "<group>"; };
+		5046E22C282168F300367ECE /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		5046E22F2821697700367ECE /* DownloadingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingApp.swift; sourceTree = "<group>"; };
 		50BC575A281698C000EE9000 /* AppDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDescriptionViewController.swift; sourceTree = "<group>"; };
 		50BC575C281698F600EE9000 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		50BC575E281699EA00EE9000 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +105,39 @@
 				A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5046E2232821678E00367ECE /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				5046E224282167A700367ECE /* Observable.swift */,
+				5046E226282167C700367ECE /* ObservableOptions.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		5046E2282821684100367ECE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5046E2292821684C00367ECE /* SearchInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5046E22B282168DF00367ECE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5046E22C282168F300367ECE /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5046E22E2821694F00367ECE /* AppDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				5046E22F2821697700367ECE /* DownloadingApp.swift */,
+			);
+			path = AppDownloader;
 			sourceTree = "<group>";
 		};
 		50BC576928169B2300EE9000 /* Builder */ = {
@@ -163,6 +206,8 @@
 		E0E1D2A62034A36C0011E01A /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				5046E22B282168DF00367ECE /* Router */,
+				5046E2282821684100367ECE /* Interactor */,
 				50BC576928169B2300EE9000 /* Builder */,
 				F8114FBF22A3E5D500102830 /* Controller */,
 				50BC576E28169D4400EE9000 /* Presenter */,
@@ -284,6 +329,7 @@
 		F8A1E03D224850CA00FE6448 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5046E2232821678E00367ECE /* Observable */,
 				E0E1D2ED2035AA980011E01A /* AppDelegate */,
 				F8A1E03E224850E500FE6448 /* Monads */,
 				E0E1D359203ADCE10011E01A /* NetworkManager */,
@@ -303,6 +349,7 @@
 		F8A1E0402248511B00FE6448 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5046E22E2821694F00367ECE /* AppDownloader */,
 				E0E1D385203AE3E00011E01A /* AppStartManager */,
 				E0E1D393203AE5AA0011E01A /* iTunesSearchService */,
 				E0E1D39D203AE7230011E01A /* ImageDownloader */,
@@ -461,7 +508,10 @@
 				50BC576528169A8A00EE9000 /* SongDetailView.swift in Sources */,
 				50BC576128169A3400EE9000 /* AppDetailDescriptionView.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
+				5046E227282167C700367ECE /* ObservableOptions.swift in Sources */,
+				5046E22D282168F300367ECE /* SearchRouter.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
+				5046E2302821697700367ECE /* DownloadingApp.swift in Sources */,
 				50BC576D28169CF800EE9000 /* SongSearchViewController.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
@@ -482,6 +532,8 @@
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
+				5046E22A2821684C00367ECE /* SearchInteractorInput.swift in Sources */,
+				5046E225282167A700367ECE /* Observable.swift in Sources */,
 				50BC577428169DDA00EE9000 /* SongCell.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,

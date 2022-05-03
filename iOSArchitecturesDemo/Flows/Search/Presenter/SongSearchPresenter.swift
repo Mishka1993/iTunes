@@ -8,7 +8,7 @@
 
 import UIKit
 
- protocol SongSearchViewInput: class {
+protocol SongSearchViewInput: AnyObject {
 
      var searchResults: [ITunesSong] { get set }
 
@@ -21,7 +21,7 @@ import UIKit
      func throbber(show: Bool)
  }
 
- protocol SongSearchViewOutput: class {
+protocol SongSearchViewOutput: AnyObject {
 
      func viewDidSearch(with query: String)
 
